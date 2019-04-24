@@ -1,0 +1,178 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+/***********************MEDIA QUERIES***********************/
+/***********************COLORS & FONTS***********************/
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Medium.ttf");
+  font-style: normal;
+  font-weight: 500; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Heavy.ttf");
+  font-style: normal;
+  font-weight: 900; }
+
+.container {
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (min-width: 320px) {
+    .container {
+      width: 100%;
+      padding: 0 15px; } }
+  @media (min-width: 767px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 1024px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
+.wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 100%;
+  min-height: 320px;
+  max-height: 1920px; }
+
+.section {
+  position: relative;
+  padding: 40px 0; }
+
+.svg-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
+.page {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #4a4a4a;
+  font-size: 18px; }
+  .page__wrap {
+    min-width: 320px;
+    max-width: 1920px;
+    margin: 0 auto; }
+
+.btn {
+  display: block;
+  padding: 0;
+  border: none;
+  width: 261px;
+  height: 50px;
+  line-height: 47.5px;
+  box-sizing: border-box;
+  position: relative;
+  background: linear-gradient(to left, #fe9a8b, #fd868c 41%, #f9748f 73%, #f78ca0);
+  border-radius: 100px;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer; }
+  .btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0 6px 23px 0 rgba(248, 116, 143, 0.51);
+    z-index: -1;
+    transition: all .3s; }
+  .btn:active::after {
+    box-shadow: 0 3px 9px 0 rgba(248, 116, 143, 0.51); }
+  .btn--header {
+    border: 2px solid #f7879c;
+    background: transparent;
+    width: 205px;
+    height: 40px;
+    line-height: 40px;
+    color: #4a4a4a;
+    display: inline-block;
+    transition: all .3s; }
+    .btn--header::after {
+      opacity: 0; }
+    .btn--header:hover {
+      background: linear-gradient(to left, #fe9a8b, #fd868c 41%, #f9748f 73%, #f78ca0);
+      color: #fff; }
+      .btn--header:hover::after {
+        opacity: 1; }
+
+.header {
+  font-size: 1.625rem;
+  padding: 0.3125rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.container {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.topbar {
+  background-color: #eee;
+  height: 50px;
+  line-height: 50px; }
+
+.footer {
+  font-size: 20px;
+  color: red; }
