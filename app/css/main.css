@@ -2,6 +2,136 @@
 
 /***********************COLORS & FONTS***********************/
 
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-y: scroll;
+}
+
+* {
+  text-decoration: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+a {
+  color: inherit;
+}
+
 body {
   background-color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -32,9 +162,163 @@ body {
   padding: 40px 0;
 }
 
+.svg-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.topbar {
+  line-height: 60px;
+  background-color: #eee;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  width: 38px;
+  height: 38px;
+  display: none;
+}
+
+.menu {
+  display: inline-block;
+}
+
+.menu__item {
+  display: inline-block;
+  margin-left: 28px;
+}
+
+.menu__item .active {
+  color: #e01010;
+}
+
+.menu__link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.65px;
+  color: #000;
+  text-transform: capitalize;
+  transition: .1s;
+  display: block;
+  position: relative;
+}
+
+.menu__link:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: accent1;
+  transition: .1s;
+}
+
+.overlayLabel {
+  display: none;
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 60px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#menuTogle {
+  display: none;
+}
+
+.menuLabel {
+  display: block;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.menuLabel span,
+.menuLabel span::before,
+.menuLabel span::after {
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  border-radius: 2px;
+  transition: all .3s ease;
+}
+
+.menuLabel span::before {
+  content: '';
+  top: -7px;
+}
+
+.menuLabel span::after {
+  content: '';
+  top: 7px;
+}
+
+#menuTogle:checked ~ .menu {
+  display: block;
+}
+
+#menuTogle:checked ~ .menu-btn .menuLabel > span {
+  background-color: transparent;
+}
+
+#menuTogle:checked ~ .menu-btn .menuLabel > span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#menuTogle:checked ~ .menu-btn .menuLabel > span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+#menuTogle:checked ~ .menu-btn .overlayLabel {
+  display: block;
+}
+
 .footer {
   font-size: 20px;
   color: red;
+}
+
+@media screen and (max-width: 960px) {
+  .menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fff;
+    z-index: 999;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+  }
+
+  .menu-btn {
+    display: block;
+    margin-left: 0;
+  }
+
+  .menu__item {
+    display: block;
+    margin-left: 0;
+    padding: 10px 0;
+  }
 }
 
 @media screen and (max-width: 780px) {
