@@ -1,0 +1,22 @@
+mixin m-menu()
+
+  +b.NAV.topbar-menu
+    input#menuTogle(type="checkbox", name="")
+    .menu-btn
+      label.menuLabel(for="menuTogle")
+        span.hamburger-inner
+      label.overlayLabel(for="menuTogle")
+
+    mixin menu-link(link,text)
+      +e.LI.item
+        +e.A.link(href=link)= text
+    mixin menu-link-a(link,text)
+      +e.LI.item
+        +e.A.link.active(href=link)= text
+
+    +b.UL#menu.menu
+      +menu-link-a('#one', 'one')
+      +menu-link('#two', 'two')
+      +menu-link('#three', 'three')
+      +menu-link('#four', 'four')
+      +menu-link('#five', 'five')

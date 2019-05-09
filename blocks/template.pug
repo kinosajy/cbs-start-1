@@ -2,43 +2,45 @@ include _assets/bemto/bemto
 - set_bemto_settings({ modifier: "--" })
 
 mixin icon(name,mod)
-	- mod = mod || ''
-	svg(class="svg-icon svg-icon-" + name + ' ' + mod)
-		use(xlink:href="img/svg/sprite/sprite.svg#" + name)
+    - mod = mod || ''
+    svg(class="svg-icon svg-icon-" + name + ' ' + mod)
+        use(xlink:href="img/svg/sprite/sprite.svg#" + name)
 
-include head/head
-include header/header
-include footer/footer
+include common/head/head
+include common/header/header
+include common/footer/footer
 
 
 doctype html
 html(lang="ru")
 
-	block head
-		head
-			+head({
-				"title": "Workshop",
-				"author": "Space Academy",
-				"description": "Workshop"
-			})
-			
-		body
-			.wrapper
-				block header
-					+header
+    block head
+        head
+            +head({
+                "title": "Workshop",
+                "author": "Space Academy",
+                "description": "Workshop"
+            })
 
-				block content
-					div content
+        body
+            .wrapper
+                block header
+                    +header
 
-				block footer
-					+footer
-				
-			block vendors
-				// build:js js/vendor.js
-				script( src="js/jquery.min.js")
-				// endbuild
+                block content
+                    div content
 
-			block scripts
-				// build:js js/main.js
-				script( src="js/main.js")
-				// endbuild
+                block footer
+                    +footer
+
+            block vendors
+                // build:js js/vendor.js
+                script( src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js")
+                script.
+                    window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')
+                // endbuild
+
+            block scripts
+                // build:js js/main.js
+                script( src="js/main.js")
+                // endbuild
