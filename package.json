@@ -1,13 +1,13 @@
 {
-  "name": "right_start",
+  "name": "cbs-start-one",
   "version": "1.0.0",
   "description": "gulp_pug_sass_bem_boilerplate",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Alexandr Ponomarenko",
-  "license": "ISC",
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.14.0",
     "gulp": "^4.0.1",
