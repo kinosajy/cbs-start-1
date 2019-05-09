@@ -2,6 +2,24 @@
 
 /***********************COLORS & FONTS***********************/
 
+body {
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
