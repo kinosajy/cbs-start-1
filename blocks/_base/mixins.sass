@@ -11,7 +11,8 @@
 	right: num
 	left: num
 
-
+=ratio($width, $height)
+	padding-bottom: (100% * $height / $width)
 
 @function rem($pixels, $context: $baseFontSize) 
   @if (unitless($pixels)) 

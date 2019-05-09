@@ -1,0 +1,17 @@
+section.section.section-video
+  .video-block
+    .embed-responsive
+
+      video#intro.embed-responsive-item(preload="metadata" poster="img/video.jpg" data-toggle="video" controls="controls")
+        source(src="img/video.mp4" type="video/mp4")
+
+      button.v-btn(data-toggle="video" data-target="#intro" type="button")
+        img(src="img/button-pause.png", alt="button")
+
+    .overlay
+
+    .upper-layer.background-title
+      h1 Explore Our Awesomeness
+      button.v-btn(data-toggle="video" data-target="#intro" type="button")
+        img(src="img/button-play.png", alt="button-play")
+      p Click to play the video

@@ -1,0 +1,77 @@
+.section-video
+  padding: 0
+
+.aaa
+  border-radius:  50%
+  display: flex
+  justify-content: space-between
+
+.video-block
+  width: 100%
+
+.video
+  position: relative
+  padding-bottom: 26%
+  height: 0
+  overflow: hidden
+  background-image: url(../img/video.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  &::before
+    content: ''
+    absolute-all(0)
+    background-color #000
+    opacity: .75
+    z-index: 1
+
+.video-heading
+  absolute-center()
+  z-index: 2
+  color: #fff
+  text-align: center
+  &__title
+    font-size: 30px
+    margin-bottom: 30px
+  &__advice
+    font-size: 15px
+
+.svg-icon-video
+  fill: green-line
+  width: 80px
+  height: 80px
+  margin-bottom: 40px
+
+#popupVid 
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 200
+
+#popupVid iframe 
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  border: none
+
+.close-video 
+  position: relative
+  z-index: 300
+  top: 10px
+  left: 10px
+  color: #fff
+  font-size: 13px
+  text-shadow: 0 1px 2px #000
+  font-family: 'Jura', sans-serif
+
+.close-video span 
+  width: 30px
+  height: 30px
+  background: #aaa
+  position: absolute
+
+.close-video span:before 
+  border-top: 2px solid #fff
+

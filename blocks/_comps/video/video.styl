@@ -1,0 +1,84 @@
+.section-video
+  padding: 0
+
+.video-block
+  position: relative
+	
+.embed-responsive 
+  position: relative
+  display: block
+  height: 0
+  padding: 0
+  overflow: hidden
+  ratio(1920, 500)
+	
+.embed-responsive-16by9
+  padding-bottom: 26.041666666666668%
+	
+.text-center 
+  text-align: center
+
+.video-block .overlay 
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: #262732
+  opacity: .85
+  z-index: 5
+	
+.background-title 
+  text-align: center
+  color: #fff;
+  position: absolute
+  z-index: 5
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  right: 0
+  // margin-top: -10px
+	
+.video-block .embed-responsive-item 
+    z-index: 4
+    position: absolute
+	
+.embed-responsive .embed-responsive-item
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+  border: 0
+  text-align: center
+	
+.video-block .embed-responsive .v-btn
+  display: none
+  z-index: 10
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  // margin-top: 10px
+	
+.video-block .v-btn 
+  background-color: transparent
+  border: none
+  cursor: pointer
+  outline: none
+  // padding 30px 0 40px
+
+.video-block .embed-responsive.playing ~ div
+  display: none
+	
+.video-block .embed-responsive.playing:hover .v-btn
+  display: block
+
+.background-title
+  h1
+    font-size 30px
+    line-height 80px
+  p
+    font-size 16px
+    line-height 80px

@@ -1,0 +1,13 @@
+section.section.section-video
+  .video-block
+    +b.DIV.video
+      +b.DIV.video-heading
+        +e.H2.title Explore Our Awesomeness
+        +e.P.button
+          a(href="javascript:;" onClick="toggleVideo();")
+            +icon('video')
+        +e.P.advice Click to play the video
+
+      #popupVid(style="display: none; position: absolute;")
+        iframe(src="http://www.youtube.com/embed/Mp12j3meMQc?showinfo=0&rel=0&modestbranding=0&enablejsapi=1" allowfullscreen frameborder='0')
+        a.close-video(href="javascript:;" onClick="toggleVideo('hide');") Закрыть

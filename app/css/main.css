@@ -1,36 +1,27 @@
 /***********************MEDIA QUERIES***********************/
-/***********************COLORS & FONTS***********************/
-.wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  height: 100%;
-  min-height: 320px;
-  max-height: 1920px; }
 
-.svg-icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor; }
+/***********************COLORS & FONTS***********************/
 
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
   padding-left: 30px;
-  padding-right: 30px; }
-  @media screen and (max-width: 780px) {
-    .wrapper {
-      padding-left: 15px;
-      padding-right: 15px; } }
+  padding-right: 30px;
+}
 
 .section {
   position: relative;
-  padding: 40px 0; }
+  padding: 40px 0;
+}
 
 .footer {
   font-size: 20px;
-  color: red; }
+  color: red;
+}
+
+@media screen and (max-width: 780px) {
+  .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

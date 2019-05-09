@@ -3,6 +3,7 @@ gulp: "use strict";
 var gulp = require('gulp'),
 		pug = require('gulp-pug'),
 		sass = require('gulp-sass'),
+		cssmedia = require('gulp-group-css-media-queries'),
 		concat = require('gulp-concat'),
 		plumber = require('gulp-plumber'),
 		prefix = require('gulp-autoprefixer'),
@@ -46,10 +47,8 @@ gulp.task('sass', function() {
 	return gulp.src(paths.blocks + '*.sass')
 		.pipe(plumber())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix({
-			browsers: ['last 2 versions'],
-			cascade: true
-		}))
+		// .pipe(prefix({browsers: ['last 2 versions']}))
+		.pipe(cssmedia())
 		.pipe(gulp.dest(paths.devDir + 'css/'))
 		.pipe(browserSync.stream());
 });
