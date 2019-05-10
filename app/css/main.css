@@ -315,7 +315,6 @@ body {
   }
 
   .menu__item {
-    display: block;
     margin-left: 0;
     padding: 10px 0;
   }
@@ -325,5 +324,9 @@ body {
   .wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .menu__item {
+    display: block;
   }
 }
