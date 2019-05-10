@@ -15,10 +15,10 @@ mixin header()
 
 						mixin menu-link($link,$text)
 							+e.LI.item
-								+e.A.link(href=$link) $text
+								+e.A.link(href=$link)= $text
 						mixin menu-link-a($link,$text)
 							+e.LI.item
-								+e.A.link.active(href=$link) $text
+								+e.A.link.active(href=$link)= $text
 						
 
 						+b.UL#menu.menu

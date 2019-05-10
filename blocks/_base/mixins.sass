@@ -1,10 +1,10 @@
-=absolute-center()
+=abs-center()
 	position: absolute
 	top: 50%
 	left: 50%
 	transform: translate(-50%,-50%)
 
-=absolute-all($num)
+=abs-all($num)
 	position: absolute
 	top: $num
 	bottom: $num
@@ -13,6 +13,11 @@
 
 =ratio($width, $height)
 	padding-bottom: (100% * $height / $width)
+
+=flex-center()
+	display: flex
+	justify-content: center
+	align-items: center
 
 @function rem($pixels, $context: $baseFontSize) 
   @if (unitless($pixels)) 

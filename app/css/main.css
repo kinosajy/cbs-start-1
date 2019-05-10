@@ -212,14 +212,8 @@ body {
   position: relative;
 }
 
-.menu__link:hover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  background-color: accent1;
-  transition: .1s;
+.menu__link:hover {
+  color: #e01010;
 }
 
 .overlayLabel {
@@ -296,6 +290,28 @@ body {
   color: red;
 }
 
+.test {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.test__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(25% - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  padding: 40px 0;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
 @media screen and (max-width: 960px) {
   .menu {
     display: none;
@@ -318,6 +334,14 @@ body {
     margin-left: 0;
     padding: 10px 0;
   }
+
+  .test {
+    padding: 0 100px;
+  }
+
+  .test__item {
+    width: calc(50% - 30px);
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -328,5 +352,11 @@ body {
 
   .menu__item {
     display: block;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .test__item {
+    width: calc(100% - 30px);
   }
 }
