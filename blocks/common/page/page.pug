@@ -5,4 +5,24 @@ mixin section-title(data)
     +e.H2.title= data.title
     +e.P.subtitle= data.subtitle
 
+mixin img-cj(name,alt)
+  +e.image
+    img(src="img/content/" + name + '.jpg', alt= alt) 
+mixin img-cp(name,alt)
+  +e.image
+    img(src="img/content/" + name + '.png', alt= alt) 
+mixin img-gj(name,alt)
+  +e.image
+    img(src="img/general/" + name + '.jpg', alt= alt) 
+mixin img-gp(name,alt)
+  +e.image
+    img(src="img/general/" + name + '.png', alt= alt) 
+
+mixin img-ratio(name,alt)
+  +e.image.img-ratio
+    img(src="img/content/" + name + '.jpg', alt= alt)
+
+mixin img-bg(name,title)
+  +e.image.img-bg(style="background-image: url(../img/content/" + name + '.jpg' role="img" aria-label= title)
+
 

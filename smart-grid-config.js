@@ -10,6 +10,7 @@ var settings = {
         maxWidth: '1170px', /* max-width оn very large screen */
         fields: '30px' /* side fields */
     },
+    
     breakPoints: {
         lg: {
             width: '1100px', /* -> @media (max-width: 1100px) */
@@ -40,4 +41,4 @@ var settings = {
 // node smart-grid-config.js 
 // run this
 
-smartgrid('./blocks/_base', settings);
+smartgrid('./blocks/_base/smart', settings);

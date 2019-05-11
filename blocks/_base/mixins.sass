@@ -14,6 +14,32 @@
 =ratio($width, $height)
 	padding-bottom: (100% * $height / $width)
 
+=img-ratio($width, $height)
+	position: relative
+	width: 100%
+	&::before
+		content: ''
+		padding-top: ($height / $width) * 100%
+		width: 100%
+		display: block
+		background-color: #d65151
+	img
+		+abs-all(0)
+
+=img-bg($width, $height)
+	position: relative
+	width: 100%
+	overflow: hidden
+	background-repeat: no-repeat
+	background-position: 50%
+	background-size: cover
+	&::before
+		content: ''
+		width: 100%
+		display: block
+		padding-bottom: (100% * $height / $width)
+	
+
 =flex-center()
 	display: flex
 	justify-content: center
@@ -27,6 +53,9 @@
     $context: $context * 1px
 
   @return $pixels / $context * 1rem
+
+
+
 
 
 // =size($a, $b = false)

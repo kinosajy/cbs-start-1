@@ -171,6 +171,22 @@ body {
   fill: currentColor;
 }
 
+.img-bg {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.img-bg::before {
+  content: '';
+  width: 100%;
+  display: block;
+  padding-bottom: 56.25%;
+}
+
 .topbar {
   line-height: 60px;
   background-color: #eee;
@@ -306,8 +322,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
-  padding: 40px 0;
+  min-height: 100px;
   font-size: 1rem;
   margin-bottom: 30px;
 }
@@ -336,7 +351,7 @@ body {
   }
 
   .test {
-    padding: 0 100px;
+    padding: 0 60px;
   }
 
   .test__item {
@@ -352,6 +367,10 @@ body {
 
   .menu__item {
     display: block;
+  }
+
+  .test {
+    padding: 0;
   }
 }
 

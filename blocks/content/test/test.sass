@@ -1,7 +1,9 @@
 .test
-  +row-flex()
+  +row()
   +md-block()
-    padding: 0 100px
+    padding: 0 60px
+  +sm-block()
+    padding: 0
 
   &__item
     +col()
@@ -10,7 +12,7 @@
     +size-xs(12)
     +flex-center()
 
-    background-color: #eee
-    padding: 40px 0
+    // background-color: #eee
+    min-height: 100px
     font-size: rem(16)
-    margin-bottom: $fields
+    margin-bottom: $offset
